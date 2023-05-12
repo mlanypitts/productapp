@@ -29,7 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  http: ^0.13.5
   lottie: ^1.4.2
 
 
@@ -62,6 +62,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/lottie/splash.json
+    - assets/images/weather/clear.png
+    - assets/images/weather/cloudy.png
+    - assets/images/weather/rain.png
+    - assets/images/weather/snow.png
+    - assets/images/weather/sun.png
+    - assets/images/weather/thunderstorm.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
