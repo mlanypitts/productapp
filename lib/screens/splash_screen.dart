@@ -16,9 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 8), () {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const NextScreen()),
-      );
+      Navigator.of(context).pushNamed('/home');
     });
   }
 
@@ -50,14 +48,3 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
-class NextScreen extends StatelessWidget {
-  const NextScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Next Screen')),
-      body: const Center(child: Text('Welcome to the next screen!')),
-    );
-  }
-}
