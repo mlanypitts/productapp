@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../models/Product.dart';
 import '../widgets/add_product_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,7 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Home Screen')),
-      body: const Center(child: Text('Welcome to the home screen!'),),
+      body: const Center(
+        child: Text('Welcome to the home screen!'),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
@@ -29,13 +32,26 @@ class _HomeScreenState extends State<HomeScreen> {
             context: context,
             builder: (_) => Padding(
               padding: MediaQuery.of(context).viewInsets,
-              child: AddProductWidget(),
+              child: AddProductWidget(
+                height: MediaQuery.of(context).size.height * 0.9,
+                width: MediaQuery.of(context).size.width,
+                onProductAdded: (Product newProduct) {
+                  if (newProduct.title.isNotEmpty) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('New Product: ${newProduct.title} added'),
+                        duration: const Duration(seconds: 5),
+                      ),
+                    );
+                  }
+                },
+              ),
             ),
           );
-
         },
         child: const Icon(Icons.add),
       ),
+      resizeToAvoidBottomInset: false,
     );
   }
 }
