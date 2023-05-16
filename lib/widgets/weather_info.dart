@@ -47,19 +47,20 @@ class _WeatherInfoState extends State<WeatherInfo> {
     DateTime today = DateTime.now();
     int time = int.parse(today.toString().substring(11, 13));
     return SizedBox(
-        height: 50, //To change
+        height: 50,
+        width: 50,//To change
         child: isLoaded
           ? weatherCode <= 3
             ? time < 17
-              ? Image.asset("images/weather/sun.png")
-              : Image.asset("images/weather/clear.png")
+              ? Image.asset("assets/images/weather/sun.png")
+              : Image.asset("assets/images/weather/clear.png")
             : weatherCode <= 48
-              ? Image.asset("images/weather/cloudy.png")
+              ? Image.asset("assets/images/weather/cloudy.png")
               : (weatherCode <= 67 || (weatherCode >= 80 && weatherCode <= 82))
-                ? Image.asset("images/weather/rain.png")
+                ? Image.asset("assets/images/weather/rain.png")
                 : (weatherCode <= 77 || (weatherCode == 85 || weatherCode == 86))
-                  ? Image.asset("images/weather/snow.png")
-                  : Image.asset("images/weather/thunderstorm.png")
+                  ? Image.asset("assets/images/weather/snow.png")
+                  : Image.asset("assets/images/weather/thunderstorm.png")
           : const CircularProgressIndicator()
     );
   }

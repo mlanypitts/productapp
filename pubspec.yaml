@@ -69,6 +69,8 @@ flutter:
     - assets/images/weather/snow.png
     - assets/images/weather/sun.png
     - assets/images/weather/thunderstorm.png
+    - assets/data/products.json
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

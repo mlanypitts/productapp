@@ -2,7 +2,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import '../models/Product.dart';
+import '../models/product.dart';
 import '../utils/constants.dart';
 
 class AddProductWidget extends StatefulWidget {
