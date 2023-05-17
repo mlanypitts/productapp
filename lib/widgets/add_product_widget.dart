@@ -111,7 +111,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
               width: 28,
               child: const Icon(
                 Icons.add,
-                color: Constants.seaBlue,
+                color: Colors.black,
                 size: 24,
               ),
             ),
@@ -122,7 +122,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
               child: Text(
                 'Add a photo',
                 style: TextStyle(
-                  color: Constants.seaBlue,
+                  color: Colors.black,
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
                 ),
@@ -236,8 +236,8 @@ class _AddProductWidgetState extends State<AddProductWidget> {
     return Text(
       text,
       style: const TextStyle(
-        color: Constants.seaBlue,
-        fontSize: 18,
+        color: Colors.black,
+        fontSize: 16,
         fontWeight: FontWeight.w700,
       ),
     );
@@ -246,7 +246,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
   TextStyle _textFieldStyle() {
     return const TextStyle(
       color: Constants.pacificBlue,
-      fontSize: 16,
+      fontSize: 14,
       fontWeight: FontWeight.normal,
     );
   }
@@ -294,9 +294,9 @@ class _AddProductWidgetState extends State<AddProductWidget> {
               child: const Text(
                 'Save',
                 style: TextStyle(
-                  color: Constants.seaBlue,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -323,7 +323,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
             width: 40,
             child: const Icon(
               Icons.close,
-              color: Constants.seaBlue,
+              color: Colors.black,
               size: 20.0,
             ),
           ),
@@ -337,9 +337,9 @@ class _AddProductWidgetState extends State<AddProductWidget> {
           child: const Text(
             'New Product',
             style: TextStyle(
-              color: Constants.seaBlue,
-              fontSize: 28,
-              fontWeight: FontWeight.w700,
+              color: Colors.black,
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
             ),
           ),
         )
