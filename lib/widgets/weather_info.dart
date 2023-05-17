@@ -30,7 +30,7 @@ class _WeatherInfoState extends State<WeatherInfo> {
   @override
   initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback(_afterLayoutInit);
+    WidgetsBinding.instance!.addPostFrameCallback(_afterLayoutInit);
   }
 
   Future<void> _afterLayoutInit(_) async {

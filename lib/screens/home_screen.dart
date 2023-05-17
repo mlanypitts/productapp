@@ -29,10 +29,10 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       "My Product App",
                       style: TextStyle(
@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     childAspectRatio: MediaQuery.of(context).size.width /
-                        (MediaQuery.of(context).size.height / 1.5),
+                        (MediaQuery.of(context).size.height / 1.3),
                     mainAxisSpacing: 12.0,
                     crossAxisSpacing: 12.0,
                   ),
